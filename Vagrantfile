@@ -20,3 +20,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
   end
 end
+
+
+#Kicking the tires on this box quickly.
+
+#Clone the repo
+#vagrant up
+#vagrant ssh
+#cd workspace ( this is the shared folder )
+#bundle
+#cp config/database.yml.sample config/database.yml
+#rake db:create:all
+#rake db:schema:load
+#In the rails console User.create!({:email => "youradmin@example.com", :password => "your_strong_password", :password_confirmation => "your_strong_password" })
+
+#Note there is also an installation of solr on this base box on port 8983 and an smtp server on localhost for testing those functions when we figure it out.
+
